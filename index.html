@@ -2,31 +2,355 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>BusinessCard_Final+photo</title>
+  <title>簡歷</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<html>
-  <head>
-    <title>namecard</title>
-  </head>
-  <body>
-<div class="mark">NCYU</div>
-    <div class="namecard">
-      <h2>秦苡禎
-        <span>Yi-Zhen Chin</span>
-      </h2>
-      <h5>國立嘉義大學數位系</h5>
-      <hr>
-      <p>興趣為打掃、聽音樂</p>
-      <div class="circle circle1"></div>
-      <div class="circle circle2"></div>
-       <div class="picture"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI6K6mkf8fVft-pdlUFAvbjsDrK6fCBtJh9Q&s" alt="My Photo"></div>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>秦苡禎的個人簡歷</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .img-fixed {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .toTop-arrow {
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0;
+      border-radius: 33%;
+      opacity: 0.6;
+      background: #000;
+      cursor: pointer;
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      display: none;
+    }
+    .toTop-arrow::before,
+    .toTop-arrow::after {
+      width: 18px;
+      height: 5px;
+      border-radius: 3px;
+      background: #feffd1;
+      position: absolute;
+      content: "";
+    }
+    .toTop-arrow::before {
+      transform: rotate(-45deg) translate(0, -50%);
+      left: 0.5rem;
+    }
+    .toTop-arrow::after {
+      transform: rotate(45deg) translate(0, -50%);
+      right: 0.5rem;
+    }
+    .toTop-arrow:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+    <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6iDpGcSi3C--kQWDzJmPvSqFxYJBC38yrLCeLPu19u5LEJ7vrmIAXcyJ9PhwySweesSM&usqp=CAU" width="50" alt="頭像">我的簡歷</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#s1">關於我</a></li>
+        <li class="nav-item"><a class="nav-link" href="#s2">技能與作品</a></li>
+        <li class="nav-item"><a class="nav-link" href="#s3">語言與證照</a></li>
+        <li class="nav-item"><a class="nav-link" href="#s4">聯絡資訊</a></li>
+      </ul>
     </div>
-    <h3 class="page_title">網頁專案-個人名版</h3>
-  </body>
+  </nav>
+  <br><br><br>
+  <section id="s1">
+    <div class="container">
+      <h1>關於我</h1>
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="https://raw.githubusercontent.com/yizhen0820/zhen/facb7c647694e2e17545f7405d099dac01959ce7/S__12197893.jpg" class="img-fluid rounded" style="max-width: 50%; height: auto;" alt="頭像">
+        </div>
+        <div class="col-md-8">
+          <h3>秦苡禎</h3>
+          <p>就讀於國立嘉義大學數位學習設計與管理學系，喜歡觀察生活細節，對數位工具的應用與創作充滿興趣，享受整理與規劃帶來的秩序感。</p>
+          <p><strong>學歷：</strong>國立嘉義大學 數位學習設計與管理學系</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="s2">
+  <div class="container">
+    <h1>技能與作品</h1>
+    <hr>
+    <h4>技能專長：</h4>
+    <ul>
+      <li>打掃環境</li>
+    </ul>
+    <h4>攝影作品：</h4>
+    <div id="photoCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+      <ol class="carousel-indicators">
+        <li data-target="#photoCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#photoCarousel" data-slide-to="1"></li>
+        <li data-target="#photoCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://raw.githubusercontent.com/yizhen0820/zhen/facb7c647694e2e17545f7405d099dac01959ce7/S__12197895_0.jpg" class="d-block w-100 img-fixed" alt="海邊">
+        </div>
+        <div class="carousel-item">
+          <img src="https://github.com/yizhen0820/zhen/blob/main/S__12214277.jpg?raw=true" class="d-block w-100 img-fixed" alt="廟宇祈福牆">
+        </div>
+        <div class="carousel-item">
+          <img src="https://raw.githubusercontent.com/yizhen0820/zhen/facb7c647694e2e17545f7405d099dac01959ce7/S__12197897_0.jpg" class="d-block w-100 img-fixed" alt="夜港風景">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#photoCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">上一張</span>
+      </a>
+      <a class="carousel-control-next" href="#photoCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">下一張</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <section id="s3">
+    <div class="container">
+      <h1>語言與證照</h1>
+      <hr>
+      <ul>
+        <li>泰雅語中級認證</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="container">
+      <h1>聯絡資訊</h1>
+      <hr>
+      <p><strong>Email：</strong>s1123845@g.ncyu.edu.tw</p>
+      <p>最後更新：2025.06.04</p>
+    </div>
+  </section>
+
+  <section id="s5" class="bg-light py-5">
+    <div class="container text-center">
+      <h1>🎵 背景音樂播放器</h1>
+      <p><strong id="trackTitle">JENNIE - like JENNIE</strong></p>
+      <button id="prevBtn" class="btn btn-outline-secondary">上一首</button>
+      <button id="playBtn" class="btn btn-outline-primary">播放</button>
+      <button id="nextBtn" class="btn btn-outline-secondary">下一首</button>
+    </div>
+  </section>
+
+  <section id="quoteSection">
+    <div class="container text-center mt-5">
+      <h2>🌟 今日金句</h2>
+      <blockquote id="quoteBox" class="blockquote"></blockquote>
+    </div>
+  </section>
+
+  <section id="drawSection">
+    <div class="container text-center mt-5">
+      <h2>🎨 線上塗鴉板</h2>
+      <canvas id="drawCanvas" width="300" height="300" style="border:1px solid #000; background:#fff;"></canvas>
+      <div class="mt-2">
+        <button onclick="clearCanvas()" class="btn btn-danger btn-sm">清除</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="chatBot">
+    <div class="container mt-5 text-center">
+      <h2>🗨️ 留言機器人</h2>
+      <textarea id="chatInput" class="form-control mb-2" rows="2" placeholder="輸入你的訊息..."></textarea>
+      <button class="btn btn-success mb-2" onclick="replyChat()">送出</button>
+      <div id="chatBox" class="border p-3 text-left bg-light" style="min-height:100px"></div>
+    </div>
+  </section>
+
+  <audio id="bgm" controls style="display:none">
+    <source id="audioSource" src="https://github.com/yizhen0820/zhen/blob/main/JENNIE%20-%20like%20JENNIE%20(Official%20Video).mp3?raw=true" type="audio/mpeg">
+    您的瀏覽器不支援音樂播放。
+  </audio>
+
+  <script>
+    const tracks = [
+      {
+        title: 'JENNIE - like JENNIE',
+        url: 'https://github.com/yizhen0820/zhen/blob/main/JENNIE%20-%20like%20JENNIE%20(Official%20Video).mp3?raw=true'
+      },
+      {
+        title: '大展鴻圖（Blueprint Supreme）',
+        url: 'https://github.com/yizhen0820/zhen/blob/main/%E6%94%AC%E4%BD%ACSKAI%20ISYOURGOD%E2%A7%B8AR%E5%8A%89%E5%A4%AB%E9%99%BD%E3%80%90%E5%A4%A7%E5%B1%95%E9%B4%BB%E5%9C%96%EF%BC%88Blueprint%20Supreme%EF%BC%89%E3%80%91HD%20%E9%AB%98%E6%B8%85%E5%AE%98%E6%96%B9%E6%AD%8C%E8%AF%8D%E7%89%88MV.mp3?raw=true'
+      },
+      {
+        title: '我喜歡你（漫畫版 MV）',
+        url: 'https://github.com/yizhen0820/zhen/blob/main/%E8%8A%92%E6%9E%9C%E9%86%AC%20Mango%20Jump%20X%20MOJOIN%20%E6%94%B9%E7%B7%A8%EF%BC%8D%E3%80%8A%E6%88%91%E5%96%9C%E6%AD%A1%E4%BD%A0%E3%80%8BI%E2%80%99m%20into%20you%E3%80%90%E6%BC%AB%E7%95%AB%E7%89%88MV%E3%80%91%40MOJOINVideo%20(1).mp3?raw=true'
+      }
+    ];
+
+    let current = 0;
+    const audio = document.getElementById('bgm');
+    const source = document.getElementById('audioSource');
+    const trackTitle = document.getElementById('trackTitle');
+    const playBtn = document.getElementById('playBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+
+    function loadTrack(index) {
+      source.src = tracks[index].url;
+      trackTitle.textContent = tracks[index].title;
+      audio.load();
+    }
+
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = '暫停';
+      } else {
+        audio.pause();
+        playBtn.textContent = '播放';
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      current = (current + 1) % tracks.length;
+      loadTrack(current);
+      audio.play();
+      playBtn.textContent = '暫停';
+    });
+
+    prevBtn.addEventListener('click', () => {
+      current = (current - 1 + tracks.length) % tracks.length;
+      loadTrack(current);
+      audio.play();
+      playBtn.textContent = '暫停';
+    });
+
+    // 金句展示
+    const quotes = [
+      '夢想不會逃跑，會逃跑的永遠是自己。',
+      '只要開始，永遠不嫌晚。',
+      '成功來自堅持，而非一時的衝動。',
+      '生活不必完美，但要精彩。',
+      '你今天努力的樣子，很美。'
+    ];
+    document.getElementById('quoteBox').textContent = quotes[Math.floor(Math.random() * quotes.length)];
+
+    // 塗鴉板功能
+    const canvas = document.getElementById('drawCanvas');
+    const ctx = canvas.getContext('2d');
+    let drawing = false;
+    canvas.addEventListener('mousedown', () => drawing = true);
+    canvas.addEventListener('mouseup', () => drawing = false);
+    canvas.addEventListener('mousemove', draw);
+    function draw(e) {
+      if (!drawing) return;
+      const rect = canvas.getBoundingClientRect();
+      ctx.fillStyle = 'black';
+      ctx.beginPath();
+      ctx.arc(e.clientX - rect.left, e.clientY - rect.top, 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    function clearCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    // 留言機器人功能
+    function replyChat() {
+      const input = document.getElementById('chatInput').value.trim();
+      if (!input) return;
+      const box = document.getElementById('chatBox');
+      const reply = document.createElement('p');
+      reply.innerHTML = `<strong>你：</strong>${input}<br><strong>機器人：</strong>${getBotReply(input)}`;
+      box.appendChild(reply);
+      document.getElementById('chatInput').value = '';
+      box.scrollTop = box.scrollHeight;
+    }
+    function replyChat() {
+    const input = document.getElementById('chatInput').value.trim();
+    if (!input) return;
+    const box = document.getElementById('chatBox');
+    const reply = document.createElement('p');
+    reply.innerHTML = `<strong>你：</strong>${input}<br><strong>機器人：</strong>${getBotReply(input)}`;
+    box.appendChild(reply);
+    document.getElementById('chatInput').value = '';
+    box.scrollTop = box.scrollHeight;
+  }
+
+  function getBotReply(msg) {
+    msg = msg.toLowerCase();
+
+    if (msg.includes('你好') || msg.includes('嗨') || msg.includes('哈囉')) {
+      return '哈囉！很高興認識你😊 有什麼想聊的嗎？';
+    }
+    if (msg.includes('再見') || msg.includes('掰掰')) {
+      return '掰掰～祝你今天順利 🍀';
+    }
+    if (msg.includes('你是誰') || msg.includes('你叫什麼')) {
+      return '我是留言小機器人，很高興為你服務！🤖';
+    }
+    if (msg.includes('幾點') || msg.includes('時間')) {
+      const now = new Date();
+      return `現在是 ${now.getHours()} 點 ${now.getMinutes()} 分 🕒`;
+    }
+    if (msg.includes('謝謝') || msg.includes('感謝')) {
+      return '不客氣，祝你天天開心 💚';
+    }
+    if (msg.includes('好棒') || msg.includes('厲害') || msg.includes('讚')) {
+      return '你太客氣啦～我會繼續努力的！💪';
+    }
+    if (msg.includes('天氣')) {
+      return '我還不能查天氣，不過希望你今天是晴天☀️，心情也晴朗！';
+    }
+    if (msg.includes('無聊')) {
+      return '無聊的時候可以畫畫、聽音樂，或來跟我聊天喔～🎨🎶';
+    }
+
+    const fallbackReplies = [
+      '這個我還不太懂耶～可以換個方式說嗎？😅',
+      '我在學習中，有空要多教教我喔 📖',
+      '哇～聽起來好有趣，你想多聊聊嗎？🤔',
+      '我喜歡跟你聊天，你說的我都會記得哦 💬'
+    ];
+    return fallbackReplies[Math.floor(Math.random() * fallbackReplies.length)];
+  }
+  </script>
+
+  <button type="button" id="BackTop" class="toTop-arrow"></button>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script>
+    $(function(){
+      $('#BackTop').click(function(){
+        $('html,body').animate({scrollTop:0}, 333);
+      });
+      $(window).scroll(function() {
+        if ( $(this).scrollTop() > 300 ){
+          $('#BackTop').fadeIn(222);
+        } else {
+          $('#BackTop').stop().fadeOut(222);
+        }
+      }).scroll();
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
 <!-- partial -->
   
